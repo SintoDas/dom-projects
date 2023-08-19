@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM PROJECTS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-purple-500">
+    <h2 class="text-3xl text-center font-bold mt-5 p-4">
+      Find Area from Various Types Of Triangles
+    </h2>
+    <section class="flex flex-col md:flex-row mt-5 y-2 w-full ml-2 mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 w-9/12">
+        <div class="card bg-blue-200 w-full shadow-xl mb-5 y-2">
+          <figure class="w-9/12 mt-2 mx-auto">
+            <img src="./images/triangle.png" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="text-3xl font-extrabold text-center">Triangle</h2>
+            <p class="text-center text-lg">Area(A):0.5 x b x h</p>
+            <div class="flex mx-2 my-4">
+              <p>
+                <input
+                  class="w-20 px-3 py-2"
+                  placeholder="base"
+                  id="base"
+                  type="text"
+                />
+                <span>cm</span>
+              </p>
+              <p>
+                <input
+                  class="w-20 px-3 py-2"
+                  type="text"
+                  placeholder="height"
+                  id="height"
+                />
+                <span>cm</span>
+              </p>
+            </div>
+
+            <p class="text-lg font-bold">
+              Area:
+              <span id="triangleArea" class="text-2xl text-blue-600">00</span>m
+              <sup>2</sup>
+            </p>
+            <div class="card-actions">
+              <button
+                onclick="handleClickToTriangle()"
+                class="btn btn-primary w-full"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-blue-200 w-full shadow-xl mb-5 y-2">
+          <figure class="w-9/12 mt-2 mx-auto">
+            <img class="mt-2" src="./images/rectangle.png" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="text-3xl font-extrabold text-center">Rectangular</h2>
+            <p class="text-center text-lg">Area(A):w x l</p>
+            <div class="flex mx-2 my-4">
+              <p class="flex-1">
+                <input
+                  class="w-20 px-3 py-2"
+                  placeholder="length"
+                  id="length"
+                  type="text"
+                />
+                <span>cm</span>
+              </p>
+              <p class="flex-1">
+                <input
+                  class="w-20 px-3 py-2"
+                  type="text"
+                  placeholder="width"
+                  id="width"
+                />
+                <span>cm</span>
+              </p>
+            </div>
+
+            <p class="text-lg font-bold">
+              Area:
+              <span id="rectangularArea" class="text-2xl text-blue-600">00</span
+              >m
+              <sup>2</sup>
+            </p>
+            <div class="card-actions">
+              <button
+                onclick="handleClickToRectangular()"
+                class="btn btn-primary w-full"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-blue-200 w-full shadow-xl mb-5 y-2">
+          <figure class="w-9/12 mt-2 mx-auto">
+            <img class="py-2" src="./images/parallelogram.png" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="text-3xl font-extrabold text-center">Parallelogram</h2>
+            <p class="text-center text-lg">Area(A):0.5 x b x h</p>
+            <div class="flex mx-2 my-4">
+              <p>
+                <input
+                  class="w-20 px-3 py-2"
+                  placeholder="base"
+                  id="major"
+                  type="text"
+                />
+                <span>cm</span>
+              </p>
+              <p>
+                <input
+                  class="w-20 px-3 py-2"
+                  type="text"
+                  placeholder="height"
+                  id="minor"
+                />
+                <span>cm</span>
+              </p>
+            </div>
+
+            <p class="text-lg font-bold">
+              Area:
+              <span id="parallelogramArea" class="text-2xl text-blue-600"
+                >00</span
+              >m
+              <sup>2</sup>
+            </p>
+            <div class="card-actions">
+              <button
+                onclick="handleClickToParallelogram()"
+                class="btn btn-primary w-full"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-1 px-2 mx-auto">
+        <h3 class="text-3xl text-white text-center font-extrabold border-b-2">
+          Area Calculation
+        </h3>
+        <div
+          id="calculationEntry"
+          class="mt-2 px-2 py-3 text-xl font-bold"
+        ></div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
